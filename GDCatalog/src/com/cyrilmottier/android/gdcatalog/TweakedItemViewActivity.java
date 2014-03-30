@@ -411,6 +411,11 @@ public class TweakedItemViewActivity extends GDListActivity {
             return 0;
         }
 
+        @Override
+        public int getType(int i) {
+            return 0;
+        }
+
         public Bundle getExtras() {
             return null;
         }
@@ -511,6 +516,11 @@ public class TweakedItemViewActivity extends GDListActivity {
         }
 
         public void setNotificationUri(ContentResolver cr, Uri uri) {
+        }
+
+        @Override
+        public Uri getNotificationUri() {
+            return null;
         }
 
         public void unregisterContentObserver(ContentObserver observer) {
