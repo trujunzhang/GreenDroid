@@ -15,6 +15,8 @@
  */
 package greendroid.graphics.drawable;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import greendroid.widget.ActionBar;
 import greendroid.widget.ActionBarItem;
 import android.content.Context;
@@ -172,6 +174,7 @@ public class ActionBarDrawable extends BitmapDrawable {
      * @param normalColor The color used to color the icon in normal mode
      * @param altColor The color used to color the icon in alternative mode
      */
+    @TargetApi(Build.VERSION_CODES.DONUT)
     public ActionBarDrawable(Context context, Drawable d, int normalColor, int altColor) {
         // TODO Cyril: Should use a Bitmap instead of a Drawable ...
         super(context.getResources(), (d instanceof BitmapDrawable) ? ((BitmapDrawable) d).getBitmap() : null);
